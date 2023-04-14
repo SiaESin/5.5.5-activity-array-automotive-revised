@@ -72,7 +72,7 @@ class Vehicle {
 		if (this.numberOfWheels == 8 && 8 == wheels) {
 			console.log(this.model + " " + this.make + " is a Truck");
 		} else if (this.numberOfWheels == 4 && 4 == wheels) {
-			console.log(this.model + " " + this.make + " is a CAr");
+			console.log(this.model + " " + this.make + " is a Car");
 		} else if (this.numberOfWheels == 2 && 2 == wheels) {
 			console.log(this.model + " " + this.make + " is a Bike");
 		} else {
@@ -105,6 +105,45 @@ console.log(v.make);
 
 //Create at least two new instances of the Car class and test them here:
 
+
+
+class Mercury extends Vehicle{
+    constructor(make, model, year, color, mileage){
+        super(make, model, year, color, mileage)
+        this.maximumPassengers = 5
+        this.passengers = 0
+        this.numberOfWheels = 4
+        this.maximumSpeed = 160
+        this.fuel = 10
+        this.scheduleService = false
+    } 
+    loadPassenger(num){
+        num = this.passengers
+        if (num <= this.maximumPassengers){
+            console.log('Everyone fits in the car')
+        } else {
+            console.log('There is not enough room in the car')
+        }
+    }  
+    scheduleService(){
+        if (this.mileage > 30000) {
+            this.scheduleService = true
+            return this.scheduleService
+          }  
+        }  
+    
+    start(){
+        if (this.fuel > 0){
+            console.log('The engine has started') //console.log goes before "return"
+            return this.start = true
+            
+        } else {
+            console.log('The engine cannot start without fuel')
+            return this.start = false
+        }
+    }
+    
+}
 
 
 

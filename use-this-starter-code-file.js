@@ -83,30 +83,6 @@ class Vehicle {
 
 //Code the Car subclass here, i.e. class Car extends Vehicle ...
 
-
-
-
-
-
-
-
-
-//Creating Instances and Testing Them
-
-
-//This is an instance of the Vehicle class. You can use it to test your code for the Vehicle class.
-
-let v = new Vehicle("Mercury", "Sedan", "1965", "color", "mileage");
-
-console.log(v.make);
-
-//You can use the same instance "v" of the Vehicle class and dot notation to add properties of the Car class to it, but you should also create at least one totally new instance with just the Car class and test it out with Vehicle and Car methods (such as with v.make shown above).
-
-
-//Create at least two new instances of the Car class and test them here:
-
-
-
 class Mercury extends Vehicle{
     constructor(make, model, year, color, mileage){
         super(make, model, year, color, mileage)
@@ -144,6 +120,31 @@ class Mercury extends Vehicle{
     }
     
 }
+
+
+
+
+//Creating Instances and Testing Them
+
+
+//This is an instance of the Vehicle class. You can use it to test your code for the Vehicle class.
+
+let v = new Vehicle("Mercury", "LX Sedan", "1965", "color", "mileage");
+
+console.log(v.make);
+
+//You can use the same instance "v" of the Vehicle class and dot notation to add properties of the Car class to it, but you should also create at least one totally new instance with just the Car class and test it out with Vehicle and Car methods (such as with v.make shown above).
+let dreamCar = new Vehicle("Mercury", "Sedan", "1999", "Satin Nickel", "99999")
+
+console.log(dreamCar.color)
+console.log(dreamCar.mileage)
+
+
+//Create at least two new instances of the Car class and test them here:
+
+
+
+
 
 
 

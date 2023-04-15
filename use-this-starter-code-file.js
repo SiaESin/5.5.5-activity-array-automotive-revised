@@ -101,7 +101,7 @@ class Mercury extends Vehicle{
             console.log('There is not enough room in the car')
         }
     }  
-    scheduleService(){
+    checkService(){
         if (this.mileage > 30000) {
             this.scheduleService = true
             return this.scheduleService
@@ -138,6 +138,9 @@ let dreamCar = new Vehicle("Mercury", "Sedan", "1999", "Satin Nickel", "99999")
 
 console.log(dreamCar.color)
 console.log(dreamCar.mileage)
+dreamCar.start()
+dreamCar.checkService()
+dreamCar.loadPassenger(5)
 
 
 //Create at least two new instances of the Car class and test them here:

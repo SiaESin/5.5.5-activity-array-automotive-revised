@@ -159,3 +159,26 @@ console.log(dreamCar.mileage)
 //Bonus (optional of course)
 
 //Code the Truck subclass of Vehicle here
+class Truck extends Vehicle{
+    constructor(make, model, year, color, mileage){
+        super(make, model, year, color, mileage)
+        this.maximumPassengers = 3
+        this.passengers = 0
+        this.numberOfWheels = 8
+        this.maximumSpeed = 120
+        this.horsePower = 400
+        this.payloadCapacity = 5000
+		this.canTow = false
+	
+    }
+	canTow(){
+		if (this.canTow = true){
+			console.log((this.model) + ' ' + 'has a tow hitch.')
+		} else {
+			console.log((this.model) + ' ' + 'cannot tow.')
+		}
+	} 
+}
+
+let myTruck = new Truck ('Mercury', 'Faker', '1999', 'midnight', '8675319')
+console.log(myTruck.model)

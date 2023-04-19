@@ -104,7 +104,9 @@ class Mercury extends Vehicle{
     checkService(){
         if (this.mileage > 30000) {
             this.scheduleService = true
+			console.log("Schedule service soon.")
             return this.scheduleService
+			
           }  
         }  
     
@@ -134,12 +136,12 @@ let v = new Vehicle("Mercury", "LX Sedan", "1965", "color", "mileage");
 console.log(v.make);
 
 //You can use the same instance "v" of the Vehicle class and dot notation to add properties of the Car class to it, but you should also create at least one totally new instance with just the Car class and test it out with Vehicle and Car methods (such as with v.make shown above).
-let dreamCar = new Vehicle("Mercury", "Sedan", "1999", "Satin Nickel", "99999")
+let dreamCar = new Mercury("Mercury", "Sedan", "1999", "Satin Nickel", "99999")
 
 console.log(dreamCar.color)
-console.log(dreamCar.mileage)
+console.log(dreamCar.year)
 dreamCar.start()
-dreamCar.checkService()
+dreamCar.checkService(dreamCar.mileage)
 dreamCar.loadPassenger(5)
 
 
